@@ -1,0 +1,70 @@
+.sliders-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.singe-slider-item {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-bottom: 15px;
+}
+
+.slider-progress-bar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 101;
+  right: 6.5%;
+  width: 20.3%;
+  top: 30px;
+}
+
+.progress-bar-item {
+  height: 3px;
+  background: white;
+  display: flex;
+  flex: auto;
+  border-radius: 4px;
+  margin: 0 3px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar-item:first-child {
+  margin-left: 0;
+}
+
+.progress-bar-item:last-child {
+  margin-right: 0;
+}
+
+.progress-bar-item .progress-bar-item__progress {
+  border-radius: 4px;
+  background: white;
+  width: 0;
+  height: 100%;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .slider-progress-bar {
+    top: 15px;
+    left: 35%;
+    width: 30%;
+    bottom: initial;
+  }
+
+  .progress-bar-item {
+    height: 2px;
+    background: rgba(255, 255, 255, 0.4)!important;
+    box-shadow: 0 0px 4px 1px rgba(0,0,0, 0.15);
+  }
+
+  .progress-bar-item .progress-bar-item__progress {
+    background: white!important;
+  }
+}
